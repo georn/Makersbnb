@@ -1,4 +1,5 @@
-require_relative '../data_mapper_setup.rb'
+require 'data_mapper'
+require 'dm-postgres-adapter'
 require 'bcrypt'
 
 class User
@@ -6,16 +7,17 @@ class User
 
   property :id, Serial
   property :email, String
-  property :name, String
   property :username, String
+  property :full_name, String
   property :contact_number, String
   property :password_digest, Text
-
-  #Will include the below line later to link the user modle to the spaces model, bookings model, etc.
-  # has n, :peeps, :through => Resource
 
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
   end
 
 end
+
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/makersbnb_#{ENV['RACK_ENV']}")
+DataMapper.finalize
+DataMapper.auto_upgrade!
