@@ -19,4 +19,9 @@ class  Makersbnb < Sinatra::Base
       erb :'users/login'
     end
   end
+
+  get '/logout' do
+    session.clear
+    redirect to('/')
+  end
 end

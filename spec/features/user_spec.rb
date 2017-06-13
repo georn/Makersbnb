@@ -40,4 +40,14 @@ feature 'User Login' do
     click_button('Login')
     expect(current_path).to eq '/login'
   end
+
+  feature 'User logout' do
+    scenario 'User is able to logout' do
+      sign_up
+      click_button('Sign up')
+      click_button('Logout')
+      expect(current_path).to eq '/'
+      expect{visit('/welcome')}.to raise_error(NoMethodError)
+    end
+  end
 end
