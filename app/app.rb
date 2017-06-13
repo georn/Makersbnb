@@ -5,6 +5,7 @@ require 'sinatra/partial'
 
 require_relative 'data_mapper_setup.rb'
 require_relative 'models/user'
+require_relative 'models/space'
 
 require_relative 'server'
 require_relative 'controllers/spaces.rb'

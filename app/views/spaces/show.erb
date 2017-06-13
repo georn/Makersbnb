@@ -1,5 +1,17 @@
-<% for @space in @spaces %>
-  Name: <%= @space.name %>
-  Description: <%= @space.description %>
-  Price: <%= @space.price %>
+<h1>List of spaces</h1>
+
+<%= @spaces.length%>
+
+ <% for @space in @spaces %>
+   Name: <%= @space.name %>
+   Description: <%= @space.description %>
+   Price: <%= @space.price %>
 <% end %>
+
+<!-- <ul>
+  <% @spaces.each do |space|%>
+    <li>Name: <%=@space.name%></li>
+    <li>Description: <%=@space.description%></li>
+    <li>Price: <%=@space.price%></li>
+  <% end %>
+</ul> -->
