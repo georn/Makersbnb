@@ -5,7 +5,7 @@ class Makersbnb < Sinatra::Base
   enable :partial_underscore
 
   get '/' do
-    "Hello world"
+    erb :'users/index'
   end
 
   run! if app_file == $0
