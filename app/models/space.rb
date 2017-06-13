@@ -8,6 +8,8 @@ class Space
   property :name, String
   property :description, Text
   property :price, Numeric
+  property :available_to, Date
+  property :available_from, Date    
 end
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/makersbnb_#{ENV['RACK_ENV']}")
