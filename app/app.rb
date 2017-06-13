@@ -5,7 +5,6 @@ require_relative 'data_mapper_setup.rb'
 require_relative 'models/user'
 
 class Makersbnb < Sinatra::Base
-
   get '/' do
     "YO YO YO"
   end
@@ -16,6 +15,15 @@ class Makersbnb < Sinatra::Base
 
   post '/signup' do
     User.create(email: params[:email], username: params[:username], full_name: params[:full_name], contact_number: params[:contact_number], password: params[:password])
+  end
+
+  get '/spaces' do
+    erb :'spaces/index'
+  end
+
+  get '/spaces/show' do
+    @spaces = Space.all
+    erb :'spaces/show'
   end
 
   run! if app_file == $0
