@@ -1,4 +1,4 @@
-require_relative '../../app/model/space'
+require_relative '../../app/models/space.rb'
 
 feature 'Space' do
   it 'A space is shown on the list' do
