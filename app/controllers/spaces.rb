@@ -7,4 +7,5 @@ class Makersbnb < Sinatra::Base
     @spaces = Space.all
     erb :'spaces/show'
   end
+
 end
