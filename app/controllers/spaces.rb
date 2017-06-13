@@ -8,4 +8,14 @@ class Makersbnb < Sinatra::Base
     erb :'spaces/show'
   end
 
+  get '/spaces/new' do
+    erb :'spaces/new'
+  end
+
+  post '/spaces/new' do
+    Space.create(name: params[:name], description: params[:description], price: params[:price])
+    redirect '/spaces'
+  end
+
+
 end
