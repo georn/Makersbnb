@@ -110,6 +110,8 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.0)
       tilt (~> 2.0)
+    sinatra-partial (0.4.0)
+      sinatra
     stringex (1.5.1)
     tilt (2.0.7)
     uuidtools (2.1.5)
@@ -128,6 +130,7 @@ DEPENDENCIES
   simplecov
   simplecov-console
   sinatra
+  sinatra-partial
 
 RUBY VERSION
    ruby 2.4.0p0
