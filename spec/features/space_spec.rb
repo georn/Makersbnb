@@ -29,7 +29,7 @@ feature 'Space' do
     expect(page.status_code).to eq 200
     click_button('Show list of spaces')
     expect(page.status_code).to eq 200
-    expect(page).to have_content(name: 'Room3', description: '3 x 3', price: 75)
+    expect(page).to have_content('Room3' && '3 x 3' && 100)
   end
 
 
