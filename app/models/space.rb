@@ -10,6 +10,7 @@ class Space
   property :price, Numeric
   property :available_to, Date
   property :available_from, Date
+  property :owner, String
 
   has n, :bookings
 

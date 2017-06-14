@@ -19,6 +19,8 @@ feature 'Space' do
   end
 
   scenario 'Create a new space' do
+    sign_up
+    click_button('Sign up')
     visit('/spaces')
     click_button('Add a new space')
     expect(page.status_code).to eq 200
