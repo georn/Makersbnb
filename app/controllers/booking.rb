@@ -16,9 +16,11 @@ class Makersbnb < Sinatra::Base
     raise 'end date is not available' if book_to > space.available_to
     cur_date = book_from
     while cur_date <= book_to do
-      if Booking.count(:date => cur_date) != 0 then
-        raise "#{cur_date} is already booked"
+      count = Booking.count(:date => cur_date, :space => space)
+      if count != 0 then
+        raise "#{cur_date} is already booked (#{count})"
       end
+      puts "count for #{cur_date} is #{count}"
       cur_date += 1
     end
     cur_date = book_from
