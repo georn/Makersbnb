@@ -4,10 +4,9 @@ feature 'booking' do
     visit('/spaces')
     click_button('Show list of spaces')
     click_button('Book')
-    fill_in('available_to', with: '12-01-18')
-    fill_in('available_from', with: '13-01-18')
-    # Booking.create(date: '12-01-18')
-    # Booking.create(date: '13-01-18')
-    expect(page).to have_content('12-01-18')
+    fill_in('book_from', with: '12-01-18')
+    fill_in('book_to', with: '13-01-18')
+    click_button('Make a booking')
+    expect(page).to have_content('Booked.')
   end
 end
