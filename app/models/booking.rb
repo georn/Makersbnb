@@ -20,6 +20,14 @@ class Booking
     return false
   end
 
+  def self.make_bookings(book_from, book_to, space)
+    cur_date = book_from
+    while cur_date <= book_to do
+      Booking.create(:date => cur_date, :space => space)
+      cur_date += 1
+    end
+  end
+
 
 
 end

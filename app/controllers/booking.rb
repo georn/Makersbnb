@@ -11,11 +11,8 @@ class Makersbnb < Sinatra::Base
     book_to = Date.parse(params[:book_to])
     raise 'Chosen date is not available' if !space.available?(book_from, book_to)
     raise 'Is already booked' if Booking.booked?(book_from, book_to, space)
-    cur_date = book_from
-    while cur_date <= book_to do
-      Booking.create(:date => cur_date, :space => space)
-      cur_date += 1
-    end
+    Booking.make_bookings(book_from, book_to, space)
     'Booked.'
   end
+  
 end
