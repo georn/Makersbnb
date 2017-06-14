@@ -8,4 +8,8 @@
    Price: <%= @space.price %>
    Available from <%= @space.available_from %>
    Available to <%= @space.available_to %></br>
+   <form class='' action='/booking/new' method='get'>
+     <input type="submit" value="Book">
+     <input type="hidden" name="space_id" value="<%=@space.id%>">
+   </form>
 <% end %>

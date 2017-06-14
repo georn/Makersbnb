@@ -9,9 +9,8 @@ class Space
   property :description, Text
   property :price, Numeric
   property :available_to, Date
-  property :available_from, Date    
-end
+  property :available_from, Date
 
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/makersbnb_#{ENV['RACK_ENV']}")
-DataMapper.finalize
-DataMapper.auto_upgrade!
+  has n, :bookings
+
+end
