@@ -14,4 +14,14 @@ class Space
 
   has n, :bookings
 
+
+  def available?(book_from, book_to)
+    return false if book_from > book_to
+    return false if book_from < self.available_from
+    return false if book_from > self.available_to
+    return false if book_to < self.available_from
+    return false if book_to > self.available_to
+    return true
+  end
+  
 end

@@ -9,11 +9,7 @@ class Makersbnb < Sinatra::Base
     space = Space.get(params[:space_id])
     book_from = Date.parse(params[:book_from])
     book_to = Date.parse(params[:book_to])
-    raise 'start date must be before to date' if book_from > book_to
-    raise 'start date is not available' if book_from < space.available_from
-    raise 'start date is not available' if book_from > space.available_to
-    raise 'end date is not available' if book_to < space.available_from
-    raise 'end date is not available' if book_to > space.available_to
+    raise 'Chosen date is not available' if !space.available?(book_from, book_to)
     cur_date = book_from
     while cur_date <= book_to do
       count = Booking.count(:date => cur_date, :space => space)
