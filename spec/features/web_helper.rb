@@ -35,6 +35,13 @@ def add_space2
   click_button('Submit new space')
 end
 
+
+def show_space
+  visit('/spaces')
+  expect(page.status_code).to eq 200
+  click_button('Show list of spaces')
+end
+
 def booking_a_space
   visit('/spaces')
   click_button('Show list of spaces')

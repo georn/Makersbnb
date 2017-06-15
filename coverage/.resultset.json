@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/app/app.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/app.rb": [
         1,
         null,
         1,
@@ -20,7 +20,7 @@
         1,
         1
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/app/models/user.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/models/user.rb": [
         1,
         1,
         1,
@@ -43,7 +43,7 @@
         null,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/app/models/space.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/models/space.rb": [
         1,
         1,
         null,
@@ -72,7 +72,7 @@
         null,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/app/models/booking.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/models/booking.rb": [
         1,
         1,
         null,
@@ -107,7 +107,7 @@
         null,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/app/data_mapper_setup.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/data_mapper_setup.rb": [
         1,
         1,
         null,
@@ -116,7 +116,7 @@
         1,
         1
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/app/server.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/server.rb": [
         1,
         null,
         1,
@@ -130,7 +130,7 @@
         1,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/app/controllers/spaces.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/controllers/spaces.rb": [
         1,
         1,
         11,
@@ -167,7 +167,7 @@
         null,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/app/controllers/users.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/controllers/users.rb": [
         1,
         null,
         1,
@@ -196,7 +196,7 @@
         null,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/app/controllers/welcome.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/controllers/welcome.rb": [
         1,
         1,
         null,
@@ -212,7 +212,7 @@
         null,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/app/controllers/booking.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/controllers/booking.rb": [
         1,
         null,
         1,
@@ -232,7 +232,7 @@
         null,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/app/controllers/messages.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/controllers/messages.rb": [
         1,
         null,
         1,
@@ -249,7 +249,7 @@
         null,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/spec/features/web_helper.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/spec/features/web_helper.rb": [
         null,
         1,
         10,
@@ -285,6 +285,13 @@
         1,
         1,
         1,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
         null,
         null,
         1,
@@ -305,7 +312,7 @@
         1,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/spec/features/booking_spec.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/spec/features/booking_spec.rb": [
         1,
         null,
         1,
@@ -330,7 +337,7 @@
         null,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/spec/features/message_spec.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/spec/features/message_spec.rb": [
         null,
         null,
         null,
@@ -371,7 +378,7 @@
         null,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/spec/features/space_spec.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/spec/features/space_spec.rb": [
         null,
         null,
         1,
@@ -379,11 +386,8 @@
         1,
         1,
         1,
-        1,
-        1,
         null,
         null,
-        1,
         1,
         1,
         1,
@@ -461,7 +465,7 @@
         null,
         null
       ],
-      "/Users/andrewclarke/Projects/makers/week6/Makersbnb/spec/features/user_spec.rb": [
+      "/Users/Pani/Documents/MakersAcademy/Makersbnb/spec/features/user_spec.rb": [
         1,
         null,
         1,
@@ -517,6 +521,6 @@
         null
       ]
     },
-    "timestamp": 1497525294
+    "timestamp": 1497528686
   }
 }

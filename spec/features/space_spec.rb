@@ -3,17 +3,14 @@
 feature 'Space' do
   scenario 'A space is shown on the list' do
     Space.create(name: 'Room1', description: '2 x 2', price: 30, available_from: '12-01-18', available_to: '17-01-18')
-    visit('/spaces')
-    expect(page.status_code).to eq 200
-    click_button('Show list of spaces')
+    show_space
     expect(page).to have_content('Room1' && '2 x 2' && 30 && '12-01-18' && '17-01-18')
   end
 
   scenario 'multiple spaces can be listed' do
     Space.create(name: 'Room1', description: '2 x 2', price: 30, available_from: '12-01-18', available_to: '17-01-18')
     Space.create(name: 'Room2', description: '4 x 4', price: 75, available_from: '05-03-18', available_to: '06-03-18')
-    visit('/spaces')
-    click_button('Show list of spaces')
+    show_space
     expect(page).to have_content('Room1' && '2 x 2' && 30 && '12-01-18' && '17-01-18')
     expect(page).to have_content('Room2' && '4 x 4' && 75 && '05-03-18' && '06-03-18')
   end
