@@ -12,7 +12,7 @@ class Makersbnb < Sinatra::Base
     return 'Chosen date is not available' if !space.available?(book_from, book_to)
     return 'Is already booked' if Booking.booked?(book_from, book_to, space)
     Booking.make_bookings(book_from, book_to, space)
-    'Booked.'
+    redirect ('/message')
   end
 
 end
