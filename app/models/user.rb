@@ -12,10 +12,9 @@ class User
   property :contact_number, String
   property :password_digest, Text
 
-  has n, :spaces, :through => Resource
+  has n, :spaces, through: Resource
 
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
   end
-
 end

@@ -17,12 +17,13 @@ feature 'User can sign up' do
     click_button('Sign up')
     expect(User.last.password_digest).not_to eq('abc123')
   end
-
 end
 
 feature 'User Login' do
   scenario 'User is able to login with valid credentials' do
-    User.create(email: 'dave@dave.com', username: 'dave1', full_name: 'dave dave', password: 'abc123', contact_number: '12345' )
+    User.create(email: 'dave@dave.com', username: 'dave1',
+                full_name: 'dave dave', password: 'abc123',
+                contact_number: '12345')
     visit('/')
     click_button('Login')
     fill_in('username', with: 'dave1')
@@ -32,7 +33,9 @@ feature 'User Login' do
   end
 
   scenario 'User is unable to login with invalid credentials' do
-    User.create(email: 'mike@dave.com', username: 'mike1', full_name: 'mike dave', password: 'def123', contact_number: '6789' )
+    User.create(email: 'mike@dave.com', username: 'mike1',
+                full_name: 'mike dave', password: 'def123',
+                contact_number: '6789')
     visit('/')
     click_button('Login')
     fill_in('username', with: 'mike1')
@@ -47,7 +50,7 @@ feature 'User Login' do
       click_button('Sign up')
       click_button('Logout')
       expect(current_path).to eq '/'
-      expect{visit('/welcome')}.to raise_error(NoMethodError)
+      expect { visit('/welcome') }.to raise_error(NoMethodError)
     end
   end
 end

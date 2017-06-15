@@ -8,5 +8,4 @@ class Message
   property :text, String
   property :sender_id, String
   property :receiver_id, String
-
 end

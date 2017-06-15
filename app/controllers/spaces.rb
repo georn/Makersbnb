@@ -18,16 +18,16 @@ class Makersbnb < Sinatra::Base
 
   post '/spaces/new' do
     Space.create(name: params[:name],
-                description: params[:description],
-                price: params[:price],
-                available_from: params[:available_from],
-                available_to: params[:available_to],
-                owner: current_user.id)
+                 description: params[:description],
+                 price: params[:price],
+                 available_from: params[:available_from],
+                 available_to: params[:available_to],
+                 owner: current_user.id)
     redirect '/spaces'
   end
 
   get '/spaces/update' do
-    @spaces = Space.all(:owner => current_user.id)
+    @spaces = Space.all(owner: current_user.id)
     erb :'spaces/update'
   end
 
@@ -37,14 +37,12 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/spaces/modify' do
-
-    Space.first(:id => params[:space_to_update_id]).update(:name => params[:name],
-                :description => params[:description],
-                :price => params[:price],
-                :available_from => params[:available_from],
-                :available_to => params[:available_to])
+    Space.first(id: params[:space_to_update_id]).update(
+                 name: params[:name],
+                 description: params[:description],
+                 price: params[:price],
+                 available_from: params[:available_from],
+                 available_to: params[:available_to])
     redirect '/spaces/show'
   end
-
-
 end

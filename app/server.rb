@@ -1,5 +1,4 @@
 class Makersbnb < Sinatra::Base
-
   register Sinatra::Partial
 
   enable :partial_underscore
@@ -8,5 +7,5 @@ class Makersbnb < Sinatra::Base
     erb :'users/index'
   end
 
-  run! if app_file == $0
+  run! if app_file == $PROGRAM_NAME
 end
