@@ -3,3 +3,11 @@ Welcome, <%= @current_user.username %>!
 <form action="/logout" method="get">
   <input type="submit" name="Logout" value="Logout">
 </form>
+
+<form action="/spaces/show" method="get">
+  <input type="submit" name="Rent" value="Rent">
+</form>
+
+<form action="spaces/host" method="get">
+  <input type="submit" name="Host" value="Host">
+</form>
