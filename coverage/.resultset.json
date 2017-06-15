@@ -257,6 +257,15 @@
         2,
         2,
         2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
         null
       ],
       "/Users/Pani/Documents/MakersAcademy/Makersbnb/spec/features/booking_spec.rb": [
@@ -273,16 +282,6 @@
         1,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         1,
         1,
         1,
@@ -446,6 +445,6 @@
         null
       ]
     },
-    "timestamp": 1497479687
+    "timestamp": 1497513719
   }
 }
