@@ -6,7 +6,8 @@ Price: <%= @space.price%></br>
 Available from: <%= @space.available_from%></br>
 Available to: <%= @space.available_to%></br>
 
-<form action="" method="post">
-
+<form action="/spaces/update" method="post">
+<input type="hidden" name="id" value="<%=@space.id%>">
+<input type="submit" name="Update" value="Update">
 </form>
 <% end %>

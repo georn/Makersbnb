@@ -60,7 +60,7 @@ feature 'Space' do
 
 
 
-  scenario 'a user can only update their own spaces' do
+  scenario 'a user can only select their own spaces for updating' do
     sign_up
     click_button('Sign up')
     add_space
@@ -72,6 +72,20 @@ feature 'Space' do
     expect(page).to have_content('Space 2')
     expect(page).not_to have_content('Space 1')
     expect(page).to have_button('Update')
+  end
+
+  scenario 'User can update space properties' do
+    sign_up
+    click_button('Sign up')
+    add_space
+    visit('/welcome')
+    click_button('Host')
+    click_button('Update my spaces')
+    click_button('Update')
+    fill_in('name', with: 'Space 3')
+    click_button('Update space')
+    visit('/spaces/show')
+    expect(page).to have_content('Space 3')
   end
 
 end
