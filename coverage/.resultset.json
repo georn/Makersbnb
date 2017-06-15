@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/app.rb": [
+      "/Users/colinscally/Projects/makersbnb/app/app.rb": [
         1,
         null,
         1,
@@ -20,7 +20,7 @@
         1,
         1
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/models/user.rb": [
+      "/Users/colinscally/Projects/makersbnb/app/models/user.rb": [
         1,
         1,
         1,
@@ -43,7 +43,7 @@
         null,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/models/space.rb": [
+      "/Users/colinscally/Projects/makersbnb/app/models/space.rb": [
         1,
         1,
         null,
@@ -72,7 +72,7 @@
         null,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/models/booking.rb": [
+      "/Users/colinscally/Projects/makersbnb/app/models/booking.rb": [
         1,
         1,
         null,
@@ -107,7 +107,7 @@
         null,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/data_mapper_setup.rb": [
+      "/Users/colinscally/Projects/makersbnb/app/data_mapper_setup.rb": [
         1,
         1,
         null,
@@ -116,7 +116,7 @@
         1,
         1
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/server.rb": [
+      "/Users/colinscally/Projects/makersbnb/app/server.rb": [
         1,
         null,
         1,
@@ -130,7 +130,7 @@
         1,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/controllers/spaces.rb": [
+      "/Users/colinscally/Projects/makersbnb/app/controllers/spaces.rb": [
         1,
         1,
         12,
@@ -182,7 +182,7 @@
         null,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/controllers/users.rb": [
+      "/Users/colinscally/Projects/makersbnb/app/controllers/users.rb": [
         1,
         null,
         1,
@@ -211,7 +211,7 @@
         null,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/controllers/welcome.rb": [
+      "/Users/colinscally/Projects/makersbnb/app/controllers/welcome.rb": [
         1,
         1,
         null,
@@ -227,7 +227,7 @@
         null,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/controllers/booking.rb": [
+      "/Users/colinscally/Projects/makersbnb/app/controllers/booking.rb": [
         1,
         null,
         1,
@@ -247,7 +247,7 @@
         null,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/app/controllers/messages.rb": [
+      "/Users/colinscally/Projects/makersbnb/app/controllers/messages.rb": [
         1,
         null,
         1,
@@ -264,7 +264,7 @@
         null,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/spec/features/web_helper.rb": [
+      "/Users/colinscally/Projects/makersbnb/spec/features/web_helper.rb": [
         null,
         1,
         11,
@@ -338,7 +338,7 @@
         1,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/spec/features/booking_spec.rb": [
+      "/Users/colinscally/Projects/makersbnb/spec/features/booking_spec.rb": [
         1,
         null,
         1,
@@ -363,7 +363,7 @@
         null,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/spec/features/message_spec.rb": [
+      "/Users/colinscally/Projects/makersbnb/spec/features/message_spec.rb": [
         null,
         null,
         null,
@@ -404,7 +404,7 @@
         null,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/spec/features/space_spec.rb": [
+      "/Users/colinscally/Projects/makersbnb/spec/features/space_spec.rb": [
         null,
         null,
         1,
@@ -497,7 +497,7 @@
         null,
         null
       ],
-      "/Users/Pani/Documents/MakersAcademy/Makersbnb/spec/features/user_spec.rb": [
+      "/Users/colinscally/Projects/makersbnb/spec/features/user_spec.rb": [
         1,
         null,
         1,
@@ -553,6 +553,6 @@
         null
       ]
     },
-    "timestamp": 1497539902
+    "timestamp": 1497542244
   }
 }

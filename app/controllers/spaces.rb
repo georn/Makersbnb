@@ -38,7 +38,7 @@ class Makersbnb < Sinatra::Base
 
   post '/spaces/modify' do
 
-    Space.first_or_create(:id => params[:space_to_update_id]).update(:name => params[:name],
+    Space.first(:id => params[:space_to_update_id]).update(:name => params[:name],
                 :description => params[:description],
                 :price => params[:price],
                 :available_from => params[:available_from],
