@@ -1,3 +1,12 @@
-<form  action="index.html" method="post">
-  <input type="submit" name="Update" value="Update">
+<h2> Update spaces</h2>
+<% for @space in @spaces %>
+Name: <%= @space.name%></br>
+Description: <%= @space.description%></br>
+Price: <%= @space.price%></br>
+Available from: <%= @space.available_from%></br>
+Available to: <%= @space.available_to%></br>
+
+<form action="" method="post">
+
 </form>
+<% end %>

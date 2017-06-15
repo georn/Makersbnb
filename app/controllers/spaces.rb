@@ -27,6 +27,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/spaces/update' do
+    @spaces = Space.all(:owner => current_user.id)
     erb :'spaces/update'
   end
 

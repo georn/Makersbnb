@@ -36,7 +36,7 @@ feature 'Space' do
     expect(page).to have_content('Room3' && '3 x 3' && 100 && '12-01-18' && '17-01-18')
   end
 
-  scenario 'user can choose to rent or host' do
+  scenario 'user can choose to rent or host a space' do
     sign_up
     click_button('Sign up')
     expect(page.status_code).to eq 200
@@ -69,11 +69,19 @@ feature 'Space' do
     expect(page).to have_button('Submit new space')
   end
 
-  scenario 'user chooses to update a space' do
+
+
+  scenario 'a user can only update their own spaces' do
     sign_up
     click_button('Sign up')
-    click_button('Host')
-    click_button('Update my spaces')
+    add_space
+    visit('/logout')
+    sign_up2
+    click_button('Sign up')
+    add_space2
+    visit('/spaces/update')
+    expect(page).to have_content('Space 2')
+    expect(page).not_to have_content('Space 1')
     expect(page).to have_button('Update')
   end
 

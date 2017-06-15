@@ -7,15 +7,33 @@ def sign_up
   fill_in('password', with: 'abc123')
 end
 
-# def add_space
-#   visit '/spaces/new'
-#   fill_in('name', with: 'Space 1')
-#   fill_in('description', with: 'Description 1')
-#   fill_in('price', with: '1')
-#   fill_in('available_from', with: '01/01/2017')
-#   fill_in('available_to', with: '01/01/2017')
-#   click_button('Submit new space')
-# end
+def sign_up2
+  visit '/'
+  fill_in('email', with: '12121.com')
+  fill_in('full_name', with: 'Bob Dave')
+  fill_in('username', with: 'Bob')
+  fill_in('password', with: 'abc123')
+end
+
+def add_space
+  visit '/spaces/new'
+  fill_in('name', with: 'Space 1')
+  fill_in('description', with: 'Description 1')
+  fill_in('price', with: '1')
+  fill_in('available_from', with: '01/01/2017')
+  fill_in('available_to', with: '01/01/2017')
+  click_button('Submit new space')
+end
+
+def add_space2
+  visit '/spaces/new'
+  fill_in('name', with: 'Space 2')
+  fill_in('description', with: 'Description 2')
+  fill_in('price', with: '2')
+  fill_in('available_from', with: '01/01/2017')
+  fill_in('available_to', with: '01/01/2017')
+  click_button('Submit new space')
+end
 
 def booking_a_space
   visit('/spaces')
