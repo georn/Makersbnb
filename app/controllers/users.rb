@@ -24,4 +24,10 @@ class  Makersbnb < Sinatra::Base
     session.clear
     redirect to('/')
   end
+
+  helpers do
+    def current_user
+      @current_user ||= User.get(session[:user])
+    end
+  end
 end
