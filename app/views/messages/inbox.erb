@@ -1,3 +1,7 @@
-My messages
+<h1>My Messages</h1>
 
-<%= Message.all(:receiver => (current_user.id)) %>
+<% @messages.each do |message| %>
+  <ul>
+    <li> <%= message.text %>  </li>
+  </ul>
+<% end %>
