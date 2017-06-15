@@ -25,3 +25,12 @@ def booking_a_space
   fill_in('book_to', with: '13-01-18')
   click_button('Make a booking')
 end
+
+def booking_the_space
+  visit('/spaces')
+  click_button('Show list of spaces')
+  click_button('Book')
+  fill_in('book_from', with: '11-01-18')
+  fill_in('book_to', with: '13-01-18')
+  click_button('Make a booking')
+end
