@@ -1,7 +1,5 @@
 <h1>List of spaces</h1>
 
-<%= @spaces.length%>
-
  <% for @space in @spaces %>
    Name: <%= @space.name %>
    Description: <%= @space.description %>
@@ -11,4 +9,6 @@
    <form class='' action='/booking/new' method='get'>
      <input type="submit" value="Book">
      <input type="hidden" name="space_id" value="<%=@space.id%>">
+
+   </form>
 <% end %>
