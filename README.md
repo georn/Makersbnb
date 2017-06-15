@@ -56,4 +56,8 @@ I want to be able to log in
 14. As a user
 So I can keep my information safe
 I want to log out
+
+15. As a user (host)
+So I can update my spaces
+I want to change their details
 ```

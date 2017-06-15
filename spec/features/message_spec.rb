@@ -1,5 +1,3 @@
-
-
 feature 'Message' do
   scenario 'booking for a room allows us to send a message' do
     sign_up
@@ -32,3 +30,4 @@ feature 'Message' do
     expect(page).to have_content('Hi, my name is Prabu and I would like to book your space')
   end
 end
+

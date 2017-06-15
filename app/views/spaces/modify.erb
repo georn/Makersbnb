@@ -1,0 +1,11 @@
+<%= @space_to_update.name%>
+
+<form action="/spaces/modify" method="post">
+  Name: <input type="text" name="name" value="<%=@space_to_update.name%>">
+  Description: <input type="text" name="description" value="<%=@space_to_update.description%>">
+  Price: <input type="numeric" name="price" value="<%=@space_to_update.price%>">
+  available from <input type="date" name="available_from" value="<%=@space_to_update.available_from%>" >
+  available to <input type="date" name="available_to" value="<%=@space_to_update.available_to%>" >
+  <input type="hidden" name="space_to_update_id" value="<%=@space_to_update.id%>">
+  <input type="submit" value="Update space">
+</form>
