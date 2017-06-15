@@ -42,6 +42,17 @@ def show_space
   click_button('Show list of spaces')
 end
 
+def add_new_space
+  visit('/spaces')
+  click_button('Add a new space')
+  fill_in('name', with:'Room3')
+  fill_in('description', with:'3 x 3')
+  fill_in('price', with:'100')
+  fill_in('available_to', with: '12-01-18')
+  fill_in('available_from', with: '17-01-18')
+  click_button('Submit new space')
+end
+
 def booking_a_space
   visit('/spaces')
   click_button('Show list of spaces')

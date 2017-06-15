@@ -18,15 +18,7 @@ feature 'Space' do
   scenario 'Create a new space' do
     sign_up
     click_button('Sign up')
-    visit('/spaces')
-    click_button('Add a new space')
-    expect(page.status_code).to eq 200
-    fill_in('name', with:'Room3')
-    fill_in('description', with:'3 x 3')
-    fill_in('price', with:'100')
-    fill_in('available_to', with: '12-01-18')
-    fill_in('available_from', with: '17-01-18')
-    click_button('Submit new space')
+    add_new_space
     expect(page.status_code).to eq 200
     click_button('Show list of spaces')
     expect(page.status_code).to eq 200
