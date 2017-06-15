@@ -8,6 +8,10 @@ class Makersbnb < Sinatra::Base
     erb :'spaces/show'
   end
 
+  get '/spaces/host' do
+    erb :'spaces/host'
+  end
+
   get '/spaces/new' do
     erb :'spaces/new'
   end
@@ -20,6 +24,10 @@ class Makersbnb < Sinatra::Base
                 available_to: params[:available_to],
                 owner: current_user.id)
     redirect '/spaces'
+  end
+
+  get '/spaces/update' do
+    erb :'spaces/update'
   end
 
 
