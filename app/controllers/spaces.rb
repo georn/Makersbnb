@@ -5,7 +5,7 @@ class Makersbnb < Sinatra::Base
 
   get '/spaces/show' do
     @spaces = Space.all
-    erb :'spaces/show'
+    erb :'spaces/show', :layout => :'bootstrap/spaces/show_spaces_styling'
   end
 
   get '/spaces/host' do
@@ -23,7 +23,7 @@ class Makersbnb < Sinatra::Base
                  available_from: params[:available_from],
                  available_to: params[:available_to],
                  owner: current_user.id)
-    redirect '/spaces'
+    redirect '/spaces/host'
   end
 
   get '/spaces/update' do
