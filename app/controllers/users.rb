@@ -10,7 +10,6 @@ class  Makersbnb < Sinatra::Base
       session[:user] = user.id
       redirect to('/welcome')
     else
-
       flash.now[:errors] = user.errors.full_messages
       erb :'users/index'
     end
