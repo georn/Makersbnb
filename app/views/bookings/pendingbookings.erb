@@ -1,0 +1,29 @@
+<h1>Pending Bookings as Host</h1>
+
+  <% @host_space.each do |pendingbooking| %>
+    <ul>
+      Space - <li> <%= Space.first(:id => pendingbooking.space_id).name %>  </li>
+      Guest name - <li> <%= User.first(:id => pendingbooking.guest).username %>  </li>
+      Requested date - <li> <%= pendingbooking.date %>  </li>
+    </ul>
+
+    <form action="/booking/approve" method="post">
+      <input type="hidden" name="space_id" value="<%= pendingbooking.id %>">
+      <input type="submit" name="approve" value="approve">
+    </form>
+
+    <form action="/booking/reject" method="post">
+      <input type="hidden" name="space_id" value="<%= pendingbooking.id %>">
+      <input type="submit" name="reject" value="reject">
+    </form>
+  <% end %>
+
+<h1>Pending Bookings as Guest</h1>
+
+  <% @guest_space.each do |pendingbooking| %>
+    <ul>
+      Space - <li> <%= Space.first(:id => pendingbooking.space_id).name  %>  </li>
+      Host name - <li> <%= User.first(:id => pendingbooking.host).username %>  </li>
+      Requested date - <li> <%= pendingbooking.date %>  </li>
+    </ul>
+  <% end %>
