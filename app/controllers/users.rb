@@ -1,12 +1,19 @@
 class  Makersbnb < Sinatra::Base
   post '/signup' do
-    user = User.create(email: params[:email],
+    user = User.new(email: params[:email],
                        username: params[:username],
                        full_name: params[:full_name],
                        contact_number: params[:contact_number],
                        password: params[:password])
-    session[:user] = user.id
-    redirect to('/welcome')
+    if user.valid?
+      user.save
+      session[:user] = user.id
+      redirect to('/welcome')
+    else
+
+      flash.now[:errors] = user.errors.full_messages
+      erb :'users/index'
+    end
   end
 
   get '/login' do
