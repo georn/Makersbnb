@@ -2,6 +2,14 @@
   <input type="submit" name="Login" value="Login">
 </form>
 
+<% if flash[:errors] && !flash[:errors].empty? %>
+  <h1>Errors:</h1>
+  <ul id='errors'>
+    <% flash[:errors].each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <h2>Sign up to MakersBnb</h2><br>
 <form action="/signup" method="post">
