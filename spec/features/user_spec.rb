@@ -25,7 +25,9 @@ feature 'User can sign up' do
   end
 
   scenario 'Password and password confirmation should match when user signs up' do
-
+    invalid_sign_up
+    click_button('Sign up')
+    expect(page).to have_content('Password does not match the confirmation')
   end
 
   scenario 'user redirected to welcome page' do
