@@ -5,6 +5,7 @@ def sign_up
   fill_in('full_name', with: 'Michael Bluth')
   fill_in('username', with: 'hermano')
   fill_in('password', with: 'abc123')
+  fill_in('password_confirmation', with: 'abc123')
 end
 
 def sign_up2
@@ -13,6 +14,16 @@ def sign_up2
   fill_in('full_name', with: 'Bob Dave')
   fill_in('username', with: 'Bob')
   fill_in('password', with: 'abc123')
+  fill_in('password_confirmation', with: 'abc123')
+end
+
+def invalid_sign_up
+  visit '/'
+  fill_in('email', with: 'a@b.com')
+  fill_in('full_name', with: 'Michael Bluth')
+  fill_in('username', with: 'hermano')
+  fill_in('password', with: 'abc123')
+  fill_in('password_confirmation', with: 'abc12')
 end
 
 def add_space
