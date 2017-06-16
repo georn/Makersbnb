@@ -3,9 +3,5 @@ class Makersbnb < Sinatra::Base
 
   enable :partial_underscore
 
-  get '/' do
-    erb :'users/index'
-  end
-
   run! if app_file == $PROGRAM_NAME
 end

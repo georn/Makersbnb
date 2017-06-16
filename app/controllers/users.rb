@@ -1,4 +1,9 @@
 class  Makersbnb < Sinatra::Base
+
+  get '/' do
+    erb :'users/index', :layout => :'bootstrap/users/signup_styling'
+  end
+
   post '/signup' do
     user = User.create(email: params[:email],
                        username: params[:username],
@@ -10,7 +15,7 @@ class  Makersbnb < Sinatra::Base
   end
 
   get '/login' do
-    erb :'users/login'
+    erb :'users/login', :layout => :'bootstrap/users/login_styling'
   end
 
   post '/login' do
