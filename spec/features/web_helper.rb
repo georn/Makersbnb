@@ -54,8 +54,8 @@ end
 
 def booking_a_space
   initialize_booking
-  fill_in('book_from', with: '12-01-18')
-  fill_in('book_to', with: '13-01-18')
+  fill_in('book_from', with: '12-07-17')
+  fill_in('book_to', with: '13-07-17')
   click_button('Make a booking')
 end
 

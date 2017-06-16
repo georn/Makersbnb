@@ -11,7 +11,7 @@ class Makersbnb < Sinatra::Base
     book_to = Date.parse(params[:book_to])
     return 'Chosen date is not available' unless space.available?(book_from, book_to)
     return 'Is already booked' if Booking.booked?(book_from, book_to, space)
-    Booking.make_bookings(book_from, book_to, space)
+    Pendingbooking.make_bookings(book_from, book_to, space)
     redirect '/message'
   end
 end

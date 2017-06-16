@@ -4,6 +4,7 @@ require 'sinatra/base'
 require 'sinatra/partial'
 
 require_relative 'models/user'
+require_relative 'models/pendingbooking'
 require_relative 'models/space'
 require_relative 'models/booking'
 require_relative 'models/message'
