@@ -8,10 +8,6 @@ class Makersbnb < Sinatra::Base
     erb :'spaces/show', :layout => :'bootstrap/spaces/show_spaces_styling'
   end
 
-  get '/spaces/host' do
-    erb :'spaces/host'
-  end
-
   get '/spaces/new' do
     erb :'spaces/new'
   end
@@ -23,7 +19,7 @@ class Makersbnb < Sinatra::Base
                  available_from: params[:available_from],
                  available_to: params[:available_to],
                  owner: current_user.id)
-    redirect '/spaces/host'
+    redirect '/host'
   end
 
   get '/spaces/update' do
@@ -43,6 +39,6 @@ class Makersbnb < Sinatra::Base
                  price: params[:price],
                  available_from: params[:available_from],
                  available_to: params[:available_to])
-    redirect '/spaces/show'
+    redirect '/spaces/update'
   end
 end

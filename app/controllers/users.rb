@@ -33,6 +33,10 @@ class  Makersbnb < Sinatra::Base
     redirect to('/')
   end
 
+  get '/host' do
+    erb :'/users/host'
+  end
+
   helpers do
     def current_user
       @current_user ||= User.get(session[:user])
