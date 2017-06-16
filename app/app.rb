@@ -1,7 +1,7 @@
 ENV['RACK_ENV'] ||= 'development'
 
 require 'sinatra/base'
-require 'sinatra/partial'
+# require 'sinatra/partial'
 
 require_relative 'models/user'
 require_relative 'models/space'

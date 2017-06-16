@@ -1,7 +1,7 @@
 class  Makersbnb < Sinatra::Base
 
   get '/' do
-    erb :'users/index', :layout => :'bootstrap/users/signup_styling'
+    erb :'users/index'
   end
 
   post '/signup' do
@@ -15,7 +15,7 @@ class  Makersbnb < Sinatra::Base
   end
 
   get '/login' do
-    erb :'users/login', :layout => :'bootstrap/users/login_styling'
+    erb :'users/login'
   end
 
   post '/login' do

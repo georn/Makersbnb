@@ -1,7 +1,7 @@
 class Makersbnb < Sinatra::Base
   get '/spaces/show' do
     @spaces = Space.all
-    erb :'spaces/show', :layout => :'bootstrap/spaces/show_spaces_styling'
+    erb :'spaces/show'
   end
 
   get '/spaces/new' do
