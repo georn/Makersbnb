@@ -3,6 +3,6 @@ class Makersbnb < Sinatra::Base
 
   get '/welcome' do
     @current_user = current_user
-    erb :welcome
+    erb :welcome, :layout => :'bootstrap/welcome_styling'
   end
 end
