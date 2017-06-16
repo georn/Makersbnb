@@ -1,14 +1,21 @@
 feature 'Booking' do
   scenario 'User can not double book' do
+    sign_up
+    click_button("Sign up")
     Space.create(name: 'Room1', description: '2 x 2',
-                 price: 30, available_from: '12-01-18',
-                 available_to: '13-01-18')
+                 price: 30, available_from: '12-07-17',
+                 available_to: '13-07-17')
     booking_a_space
+    visit('/logout')
+    sign_up2
+    click_button("Sign up")
     booking_a_space
     expect(page).to have_content('Is already booked')
   end
 
   scenario 'User can not choose outside the available dates for rent' do
+    sign_up
+    click_button("Sign up")
     Space.create(name: 'Room1', description: '2 x 2',
                  price: 30, available_from: '12-01-18',
                  available_to: '13-01-18')
@@ -32,7 +39,5 @@ feature 'Booking' do
     fill_in('book_from', with: '12-07-2017')
     fill_in('book_to', with: '13-07-2017')
     expect { click_button('Make a booking') }.to change { Pendingbooking.count }.by(2)
-    # fill_in('message', with: 'I want to book your space')
-    # expect { click_button('Send Message') }.to change { Pendingbooking.count }.by(1)
   end
 end

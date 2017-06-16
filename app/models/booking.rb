@@ -6,6 +6,8 @@ class Booking
 
   property :id, Serial
   property :date, DateTime, required: true
+  property :guest, String
+  property :host, String
 
   belongs_to :space
 
@@ -19,10 +21,10 @@ class Booking
     false
   end
 
-  def self.make_bookings(book_from, book_to, space)
+  def self.make_bookings(book_from, book_to, space, guest, host)
     cur_date = book_from
     while cur_date <= book_to do
-      Booking.create(date: cur_date, space: space)
+      Booking.create(date: cur_date, space: space, guest: guest, host: host)
       cur_date += 1
     end
   end

@@ -1,0 +1,19 @@
+<h1>Approved Bookings as Host</h1>
+
+  <% @host_space.each do |approvedbooking| %>
+    <ul>
+      Space - <li> <%= Space.first(:id => approvedbooking.space_id).name %>  </li>
+      Guest name - <li> <%= User.first(:id => approvedbooking.guest).username %>  </li>
+      Requested date - <li> <%= approvedbooking.date %>  </li>
+    </ul>
+  <% end %>
+
+<h1>Approved Bookings as Guest</h1>
+
+  <% @guest_space.each do |approvedbooking| %>
+    <ul>
+      Space - <li> <%= Space.first(:id => approvedbooking.space_id).name  %>  </li>
+      Host name - <li> <%= User.first(:id => approvedbooking.host).username %>  </li>
+      Requested date - <li> <%= approvedbooking.date %>  </li>
+    </ul>
+  <% end %>
