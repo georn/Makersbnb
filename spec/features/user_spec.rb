@@ -24,6 +24,10 @@ feature 'User can sign up' do
     expect(page).to have_content('Email is already taken')
   end
 
+  scenario 'Password and password confirmation should match when user signs up' do
+
+  end
+
   scenario 'user redirected to welcome page' do
     sign_up
     click_button('Sign up')
@@ -41,7 +45,7 @@ feature 'User Login' do
   scenario 'User is able to login with valid credentials' do
     User.create(email: 'dave@dave.com', username: 'dave1',
                 full_name: 'dave dave', password: 'abc123',
-                contact_number: '12345')
+                password_confirmation: 'abc123', contact_number: '12345')
     visit('/')
     click_button('Login')
     fill_in('username', with: 'dave1')
@@ -53,7 +57,7 @@ feature 'User Login' do
   scenario 'User is unable to login with invalid credentials' do
     User.create(email: 'mike@dave.com', username: 'mike1',
                 full_name: 'mike dave', password: 'def123',
-                contact_number: '6789')
+                password_confirmation: 'def123', contact_number: '6789')
     visit('/')
     click_button('Login')
     fill_in('username', with: 'mike1')
