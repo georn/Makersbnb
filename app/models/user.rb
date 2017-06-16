@@ -12,7 +12,7 @@ class User
   property :contact_number, String
   property :password_digest, Text
 
-  validates_presence_of :email
+  validates_presence_of :email, as: :email_address
   validates_presence_of :username
 
   has n, :spaces, through: Resource

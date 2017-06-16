@@ -6,23 +6,23 @@ feature 'User can sign up' do
     expect { click_button('Sign up') }.to change { User.count } .by 1
   end
 
-    scenario 'Each username is unique' do
-      sign_up
-      click_button('Sign up')
-      click_button('Logout')
-      fill_in('username', with: 'hermano')
-      click_button('Sign up')
-      expect(page).to have_content('Username is already taken')
-    end
+  scenario 'Each username is unique' do
+    sign_up
+    click_button('Sign up')
+    click_button('Logout')
+    fill_in('username', with: 'hermano')
+    click_button('Sign up')
+    expect(page).to have_content('Username is already taken')
+  end
 
-    scenario 'Each registered email is unique' do
-      sign_up
-      click_button('Sign up')
-      click_button('Logout')
-      fill_in('email', with: 'a@b.com')
-      click_button('Sign up')
-      expect(page).to have_content('Email is already taken')
-    end
+  scenario 'Each registered email is unique' do
+    sign_up
+    click_button('Sign up')
+    click_button('Logout')
+    fill_in('email', with: 'a@b.com')
+    click_button('Sign up')
+    expect(page).to have_content('Email is already taken')
+  end
 
   scenario 'user redirected to welcome page' do
     sign_up
