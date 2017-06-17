@@ -7,7 +7,6 @@ class  Makersbnb < Sinatra::Base
                        password: params[:password],
                        password_confirmation: params[:password_confirmation])
     if user.valid?
-      puts "Hello************************************************"
       user.save
       session[:user] = user.id
       redirect to('/welcome')
