@@ -18,12 +18,13 @@
     </form>
   <% end %>
 
+
 <h1>Pending Bookings as Guest</h1>
 
   <% @guest_space.each do |pendingbooking| %>
     <ul>
       Space - <li> <%= Space.first(:id => pendingbooking.space_id).name  %>  </li>
-      Host name - <li> <%= User.first(:id => pendingbooking.host).username %>  </li>
+
       Requested date - <li> <%= pendingbooking.date %>  </li>
     </ul>
   <% end %>

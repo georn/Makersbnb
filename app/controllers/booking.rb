@@ -30,12 +30,16 @@ class Makersbnb < Sinatra::Base
     guest = space.guest
     host = space.host
     Booking.create(date: date, space_id: spaceid, guest: guest, host: host)
+    Message.create(text: 'Looking forward to it! :)', sender_id: host, receiver_id: guest, type: 'approval')
     space.destroy
     erb :'bookings/approve'
   end
 
   post '/booking/reject' do
     space = Pendingbooking.first(:id => params[:space_id])
+    guest = space.guest
+    host = space.host
+    Message.create(text: 'Sorry :(', sender_id: host, receiver_id: guest, type: 'rejection')
     space.destroy
     erb :'bookings/reject'
   end
