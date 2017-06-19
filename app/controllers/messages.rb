@@ -6,7 +6,8 @@ class Makersbnb < Sinatra::Base
   post '/message' do
     Message.create(text: params[:message],
                    sender_id: current_user.id,
-                   receiver_id: Space.first(id: session[:space_id]).owner)
+                   receiver_id: Space.first(id: session[:space_id]).owner,
+                   type: params[:type])
     erb :'messages/confirmation'
   end
 

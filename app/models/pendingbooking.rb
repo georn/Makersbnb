@@ -11,16 +11,6 @@ class Pendingbooking
 
   belongs_to :space
 
-  def self.booked?(book_from, book_to, space)
-    cur_date = book_from
-    while cur_date <= book_to do
-      count = Pendingbooking.count(date: cur_date, space: space)
-      return true if count != 0
-      cur_date += 1
-    end
-    false
-  end
-
   def self.make_bookings(book_from, book_to, space, guest, host)
     cur_date = book_from
     while cur_date <= book_to do

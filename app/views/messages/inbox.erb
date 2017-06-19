@@ -1,8 +1,19 @@
 <h1>My Messages</h1>
 
 <% @messages.each do |message| %>
+  <%
+    if message.type == 'request'
+      header = "A request has been made to book your space! Click 'view pending bookings' below to approve or reject"
+    elsif message.type == 'approval'
+      header = "Your request was approved! Click 'view approved bookings' to see all your bookings!"
+    elsif message.type == 'rejection'
+      header = "Your request was rejected! Click 'view approved bookings' to see other approved bookings!"
+    end
+  %>
   <ul>
-    <li> <%= message.text %>  </li>
+    <li> <%= header %> </li>
+    <li> From - <%= User.first(:id => message.sender_id).username %>  </li>
+    <li> Message Content - <%= message.text %>  </li>
   </ul>
 
   <form action="/booking/pendingbooking" method="get">
