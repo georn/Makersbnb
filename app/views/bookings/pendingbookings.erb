@@ -1,7 +1,7 @@
 <h1>Pending Bookings as Host</h1>
 
   <% @host_space.each do |pendingbooking| %>
-    <ul>
+    <ul id='hostlist'>
       Space - <li> <%= Space.first(:id => pendingbooking.space_id).name %>  </li>
       Guest name - <li> <%= User.first(:id => pendingbooking.guest).username %>  </li>
       Requested date - <li> <%= pendingbooking.date %>  </li>
